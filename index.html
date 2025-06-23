@@ -1,11 +1,73 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Welcome to My Website</title>
+  <style>
+    nav a {
+      margin-right: 15px;
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+    .section-content {
+      display: none;
+      margin-top: 15px;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+    .project-link {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Hello, I'm Adithya!</h1>
   <p>This is my personal site hosted with GitHub Pages.</p>
+
+  <!-- Navigation menu -->
+  <nav>
+    <a onclick="toggleSection('education')">Education</a>
+    <a onclick="toggleSection('projects')">Projects</a>
+  </nav>
+
+  <!-- Education content -->
+  <div id="education" class="section-content">
+    <h2>My Education</h2>
+    <p>Here you can write about your school, college, degrees, etc.</p>
+  </div>
+
+  <!-- Projects content -->
+  <div id="projects" class="section-content">
+    <h2>My Projects</h2>
+
+    <div class="project-link">
+      <a href="https://adithyaanand42.github.io/projects/unity-project-1/" target="_blank">Unity Project 1 (Play Online)</a><br>
+      <a href="https://github.com/adithyaanand42/unity-project-1" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="project-link">
+      <a href="https://adithyaanand42.github.io/projects/unity-project-2/" target="_blank">Unity Project 2 (Play Online)</a><br>
+      <a href="https://github.com/adithyaanand42/unity-project-2" target="_blank">GitHub Repo</a>
+    </div>
+
+    <!-- Add more projects the same way -->
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.section-content');
+      sections.forEach(sec => {
+        if (sec.id === id) {
+          // Toggle this one
+          sec.style.display = (sec.style.display === 'block') ? 'none' : 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
