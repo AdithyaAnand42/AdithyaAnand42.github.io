@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to My Website</title>
+  <style>
+    nav a {
+      margin-right: 15px;
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+    .section-content {
+      display: none;
+      margin-top: 15px;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+    .project-link {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello, I'm Adithya Anand!</h1>
+  <p>This is my personal site hosted with GitHub Pages.</p>
+
+  <nav>
+    <a onclick="toggleSection('education')">Education</a>
+    <a onclick="toggleSection('projects')">Projects</a>
+  </nav>
+
+  <div id="education" class="section-content">
+    <h2>My Education</h2>
+    <h3>Louisiana State University, Baton Rouge, LA</h3>
+    <p>B.S. in Computer Science, Focus on Cybersecurity — August 2023 – Present</p>
+    <ul><li>President's Honor Roll, Spring 2025</li></ul>
+    <h3>Moon Area High School, Coraopolis, PA</h3>
+    <p>High School Diploma — August 2019 – June 2023</p>
+    <ul><li>Graduated with Honor Roll</li></ul>
+    <h3>Certificates</h3>
+    <p>Currently working on getting the ISC² Certified in Cybersecurity (CC) certification.</p>
+  </div>
+
+  <div id="projects" class="section-content">
+    <h2>My Projects</h2>
+
+    <div class="project-link">
+      <a href="https://adithyaanand42.github.io/projects/unity-project-1/" target="_blank">Unity Project 1 (Play Online)</a><br>
+      <a href="https://github.com/CSC-3380-Spring-2025/Team-14" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="project-link">
+      <a href="https://adithyaanand42.github.io/blackjack/" target="_blank">Blackjack Game (Play Online)</a><br>
+      <a href="https://github.com/AdithyaAnand42/BlackJackGame" target="_blank">GitHub Repo</a>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      const sections = document.querySelectorAll('.section-content');
+      sections.forEach(sec => {
+        sec.style.display = (sec.id === id) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
